@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class Emp {
 
     @GetMapping("/get-name")
-    public ResponseEntity<?> getName(){
-        return ResponseEntity.status(HttpStatus.OK).body("Jai shree ram");
+    public ResponseEntity<String> getName() {
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body("Jai shree ram");
     }
 }
